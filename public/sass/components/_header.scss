@@ -1,0 +1,83 @@
+.header {
+  height: 100vh; /* viewport height*/
+  background-image: linear-gradient(
+    to right bottom,
+     rgba($color-wine, 0.8),
+     rgba($color-green, 0.8)),
+     url(../img/sept22.jpg);
+  background-size: cover; /* fit element in the box */
+  background-position: center;
+  position: relative;
+
+  opacity: 0;
+  opacity: 1 \9;
+  animation: fade ease-in 1s;
+  animation-fill-mode:forwards; //for it to stay opacity 1
+
+  /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* The corners are the inputs*/
+  /* MAKES IT SLOW!! */
+
+  &-logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  &-logo {
+    opacity: 0;
+    opacity: 1 \9;
+    height: 70px;
+    animation: fade 1s;
+    animation-delay: 4s;
+    animation-fill-mode:forwards;
+  }
+
+  &-logo:hover {
+    transform: scale(1.1);
+  }
+
+  &-text-box{
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &-primary{
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+
+  }
+
+  &-primary-main{
+    display: block;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 20px;
+    opacity: 0;
+    opacity: 1 \9;
+    animation: fade ease-in 1s;
+    animation-delay: 1s;
+    text-align: center;
+    animation-fill-mode:forwards; //for it to stay opacity 1
+
+  }
+
+  &-primary-sub{
+    opacity: 0;
+    opacity: 1 \9;
+    display: block;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 15px;
+    text-align: center;
+    animation: fade ease-in 1s;
+    animation-delay: 2s;
+    animation-fill-mode:forwards;
+  }
+
+}

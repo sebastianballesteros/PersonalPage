@@ -1,0 +1,7 @@
+@mixin clearfix {
+  &::after { //& is gonna be replaced with the class we want
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

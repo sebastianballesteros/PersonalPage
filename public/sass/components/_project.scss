@@ -1,0 +1,38 @@
+.project{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba(black, .1);
+    background-color: rgba(white,.7);
+    border-radius: 3px;
+    padding: 2rem;
+    font-size:1rem;
+    transform: skewX(-10deg);
+    transition: all .2s;
+
+    &:hover{
+      box-shadow: 0 3rem 6rem rgba(black, .5);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    &-figure{
+      width: 7rem;
+      height: 7rem;
+      float: left;
+      shape-outside: circle(50% at 50% 50%); //Just to flow around that element
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%); //the actual circle
+      transform: translateX(-1rem) skewX(10deg);
+    }
+
+    &-image{
+      height: 100%;
+    }
+
+    &-text{
+      transform: skewX(10deg);
+    }
+
+}

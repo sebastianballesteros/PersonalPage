@@ -1,0 +1,43 @@
+.section-about {
+  background-color: $color-gray-light-1;
+  padding: 5rem 0;
+}
+
+.section-education{
+  padding: 2rem 0 7rem 0 ;
+  background-image: linear-gradient(
+    to right bottom,
+     rgba($color-wine, 0.8),
+     rgba($color-green, 0.8)),
+     url(../img/playa.jpg);
+  background-size: cover; /* fit element in the box OR 100% */
+  background-position: center;
+}
+
+.section-experience {
+  //background-color: rgba($color-gray-med, .6);
+  background-image: linear-gradient(
+    to right bottom,
+     rgba($color-gray-med, 0.8),
+     rgba(black, 0.6)),
+     url(../img/ledd1.jpg);
+  background-size: cover; /* fit element in the box */
+  background-position: center;
+  padding: 2rem 0 5rem 0 ;
+}
+
+.section-projects{
+  padding: 2rem 0 3rem 0 ;
+  position: relative;
+}
+
+.section-personal-life{
+  padding: 2rem 0 5rem 0;
+  background-color: black;
+}
+
+
+.section-contact{
+  padding: 2rem 0 5rem 0;
+  background-color: rgba(black, .7);
+}

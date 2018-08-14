@@ -1,0 +1,67 @@
+.card{
+  perspective: 200rem; //the lower the value the more dramatic the perspective
+  -moz-perspective: 200rem;
+  -webkit-perspective: 200rem;
+  position: relative;
+  height: 30rem;
+  text-align: center;
+  border-radius: 3px;
+
+  &-icon{
+    //margin: 8rem;
+    //margin-bottom: .5rem;
+    display: block;
+    margin: 8rem auto 3rem auto;
+
+    &-ledd{
+      height: 5rem;
+    }
+
+    &-motum{
+      height: 8rem;
+      margin-top: 5rem;
+    }
+  }
+
+
+  &-side{
+    height: 30rem;
+    color: black;
+
+    background-color: rgba(white, .6);
+    transition: all .8s;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; //hides the
+    -webkit-backface-visibility:hidden;
+
+    &-front{
+
+
+      &-1{
+
+
+      }
+
+    }
+
+    &-back{
+
+      transform: rotateY(180deg);
+
+      &-1{
+
+      }
+
+    }
+  }
+    &:hover &-side-front{
+      transform: rotateY(180deg);
+    }
+
+    &:hover &-side-back{
+      transform: rotateY(0);
+    }
+}

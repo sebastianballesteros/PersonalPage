@@ -1,0 +1,59 @@
+.footer{
+  background-color: $color-wine;
+  padding: 5rem 0;
+  font-size: 1rem;
+
+  &-logo-box{
+    text-align: center;
+  }
+
+  &-logo{
+    width: 10rem;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  &-navigation{
+    border-top: 1px solid $color-gray-light-1;
+    padding: 2rem;
+    display: inline-block; //not 100%, just what it needs
+  }
+
+  &-list{
+    list-style: none;
+  }
+
+  &-item{
+    display: inline-block;
+
+    &:not(:last-child){
+      margin-right: 1.5rem;
+    }
+
+  }
+
+  &-link{
+    &:link,
+    &:visited{
+      color:$color-gray-light-1;
+      background-color: $color-wine;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all .2s;
+    }
+
+    &:hover,
+    &:active{
+      color: white;
+      transform: scale(1.2);
+    }
+  }
+
+  &-copyright{
+    border-top: 1px solid $color-gray-light-1;
+    padding: 2rem;
+    display: inline-block; //not 100%, just what it needs
+  }
+
+}

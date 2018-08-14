@@ -1,0 +1,15 @@
+.contact{
+  background-image: linear-gradient(105deg,
+  rgba(white, .7) 50%,
+  transparent 50%),
+  url(../img/playa3.jpg);
+  background-size: cover; //or 100%
+  height: 25rem;
+  border-radius: 3px;
+  background-position: center;
+  box-shadow: 0 1.5rem 4rem rgba(black, .15);
+
+  &-form{
+    margin: 5rem;
+  }
+}

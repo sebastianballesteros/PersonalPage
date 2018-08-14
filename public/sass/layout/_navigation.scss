@@ -1,0 +1,163 @@
+.navigation{
+
+  &-checkbox{
+    display: none;
+  }
+
+  &-button{
+    //background-color: rgba(black, .85);
+    height: 4.5rem;
+    width: 4.5rem;
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    border-radius: 50%;
+    z-index: 11;
+    box-shadow: 0 1rem 3rem rgba(black, .1);
+
+    //transition
+    opacity: 0;
+    opacity: 1 \9;
+    height: 70px;
+    animation: fade 1s;
+    animation-delay: 4s;
+    animation-fill-mode:forwards;
+
+  }
+
+  &-background{
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    background-image: radial-gradient(rgba(black, .75) ,rgba(black, .85));
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    z-index: 9;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07,1 );
+
+    opacity: 0;
+    opacity: 1 \9;
+    height: 70px;
+    animation: fade 1s;
+    animation-delay: 4s;
+    animation-fill-mode:forwards;
+  }
+
+  &-nav{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    transition: all .8s cubic-bezier(0.68, -0.4, 0.265, 1.55 );
+
+    //for hiding it
+    opacity: 0;
+    width: 0;
+
+  }
+
+  &-list{
+    //for center
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    transition: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+
+  }
+
+  &-item{
+    margin: 2rem;
+  }
+
+  &-link{
+    display: inline;
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+    background-size: 300%;
+    transition: all .5s;
+
+    &:hover,
+    &:active{
+      background-position: 100%;
+      color:black;
+      transform: translateX(1rem);
+    }
+
+  }
+
+  &-checkbox:checked ~ &-background{
+      transform: scale(80);
+  }
+
+  &-checkbox:checked ~ &-nav{
+      opacity: 1;
+      width: 100%;
+  }
+
+  &-icon{
+    position: relative;
+    top: 2.2rem;
+    right: -1.2rem;
+
+    //transition
+    opacity: 0;
+    opacity: 1 \9;
+    height: 70px;
+    animation: fade 1s;
+    animation-delay: 4s;
+    animation-fill-mode:forwards;
+
+    &,
+    &::before,
+    &::after{
+      width: 2rem;
+      height: 2px;
+      background-color: white;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before{ top: -.5rem }
+    &::after { top: .5rem }
+  }
+
+  &-button:hover &-icon::before{
+    top: -.7rem;
+  }
+
+  &-button:hover &-icon::after{
+    top: .7rem;
+  }
+
+  //checkbox is checked, select the button (+ is for sibling) and inside it select icon
+  &-checkbox:checked + &-button &-icon{
+    background-color: transparent;
+  }
+
+  &-checkbox:checked + &-button &-icon::before{
+    top:0;
+    transform: rotate(135deg);
+  }
+
+  &-checkbox:checked + &-button &-icon::after{
+    top:0;
+    transform: rotate(-135deg);
+  }
+}
