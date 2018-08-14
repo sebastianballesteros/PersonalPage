@@ -17,6 +17,5 @@ app.get("/", function(req,res){
     res.sendFile("/public/index.html");
 });
 
-app.listen(8080, process.env.IP, function(){
-    console.log("Server is running");
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
