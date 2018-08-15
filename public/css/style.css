@@ -202,10 +202,13 @@ body {
     margin-bottom: .5rem;
     width: 8rem;
     height: 7.5rem; }
+  .education-text {
+    line-height: 2rem; }
 
 .card {
   perspective: 200rem;
   -moz-perspective: 200rem;
+  -webkit-perspective: 200rem;
   position: relative;
   height: 30rem;
   text-align: center;
@@ -227,9 +230,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; }
     .card-side-back {
       transform: rotateY(180deg); }
+      .card-side-back-text {
+        padding: 7rem 3rem 3rem 3rem;
+        text-align: justify;
+        line-height: 2rem; }
   .card:hover .card-side-front {
     transform: rotateY(180deg); }
   .card:hover .card-side-back {
@@ -314,7 +322,6 @@ body {
     color: #f7f7f7;
     background-color: #752f37;
     text-decoration: none;
-    text-transform: uppercase;
     display: inline-block;
     transition: all .2s; }
   .footer-link:hover, .footer-link:active {
