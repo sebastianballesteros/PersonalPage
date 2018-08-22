@@ -10,22 +10,28 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/sb.png">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="jquery.localscroll.js" type="text/javascript"></script>
         <script src="jquery.scrollTo.js" type="text/javascript"></script>
 
 
         <script type="text/javascript">
-        $(document).on("click","a",function(e){
-                e.preventDefault();
-                var id = $(this).attr("href"),
-                    topSpace = 30;
-                    //alert(id);
+        $(function() {
+          $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
                 $('html, body').animate({
-                  scrollTop: $(id).offset().top - topSpace
-                }, 800);
-            });
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
         </script>
+
 
         <title> Sebastian Ballesteros | Personal Page </title>
     </head>
@@ -56,8 +62,8 @@
         <header class="header">
 
           <div class="header-logo-box">
-            <a href="http://github.com/sebastianballesteros">
-             <img src="./img/git-white.png" alt="Logo" class="header-logo" >
+            <a href="https://github.com/sebastianballesteros">
+             <img src="./img/git-white.png" alt="Logo" class="header-logo" style="z-index:-1;">
            </a>
           </div>
 
@@ -89,14 +95,19 @@
               <h3 class="heading-tertiary">
                 About Myself
               </h3>
-              <p class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <p class="paragraph" style="margin-bottom:1.5rem; text-align: justify;">
+                I am Sebastian Ballesteros but most of my friends call me Tatan. I am a third year university student living in Montréal, Quebec.
+                I was born in a small and beautiful (I may be biased though) town in Veracruz, México. Eventhough I spent basically my entire life in México,
+                I always wanted to explore the world and the different cultures that live in it.
               </p>
               <h3 class="heading-tertiary">
-                My experiences and goals
+                My hobbies and goals
               </h3>
-              <p class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <p class="paragraph" style=" text-align: justify;">
+                All of my hobbies sort of complement each other. I love photography and filming, as well as video and image editing.
+                When I travel I love to capture every moment with videos and pictures. I love traveling and (why not?) dancing to a good latin music.
+                As for my goals, I am currently pursuing a bachelor in Software Engineering at McGill University and working in my personal projects (see below).
+                I am always eager to learn new technology and skills.
               </p>
             </div>
 
@@ -129,7 +140,6 @@
                         BSc. Honours Software Engineering
                         McGill University <br/>
                         Montréal, Quebec. Canada <br/>
-                        GPA: 3.3/4.0 <br/>
                   </p>
               </div>
             </div>
@@ -141,7 +151,6 @@
                     Bilingual High School <br/>
                     Tecnológico de Monterrey<br/>
                     Córdoba, Veracruz. México <br/>
-                    GPA: 98/100 <br/>
                 </p>
               </div>
             </div>
@@ -153,7 +162,6 @@
                     French immersion program <br/>
                     Collège Saint-Charles Garnier<br/>
                     Quebec City, Quebec. Canada <br/>
-                    GPA: 90/100 <br/>
                 </p>
               </div>
             </div>
@@ -179,8 +187,11 @@
                     </p>
                   </div>
                   <div class="card-side card-side-back card-side-back-text">
-                    · Worked as a front end developer building a website for the company. <br/>
-                    · Learnt advanced CSS and SASS, as well as Drupal CMS.
+                    Working in LEDD during this past summer gave me a more insightful experience
+                    while collaborating with a team. I worked with other three interns to build from scratch
+                    a website for the startup. We had to familiare with Drupal CMS,
+                    advanced CSS and SASS as well as tools to share code and develop in group.
+                    Most of the work was in the front end part of the application.
                   </div>
                 </div>
               </div>
@@ -194,8 +205,11 @@
                     </p>
                   </div>
                   <div class="card-side card-side-back card-side-back-1 card-side-back-text">
-                    · Designed a basic OSGI-Java Modular Application composed of bundles. <br/>
-                    · Presented the Modular Application as a personal project to the software group.
+                    This was my first internship back in Mexico; I collaborated with the development group at first
+                    and then they assigned me a personal project to work with. I designed a basic OSGI-Java Modular application
+                    composed of bundles and then presented the application as a personal project to the software group at the end
+                    of the internship. This helped me to work more independently as I was the only intern.
+
                   </div>
                 </div>
               </div>
@@ -225,7 +239,10 @@
               </figure>
               <h3 class="heading-tertiary u-margin-bottom-1 project-text"> Web Development </h3>
               <p class="project-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Web Development was my first personal project, and as a result I learned to build applications with a front and a back end.
+                This personal page was a consequence of this project. Among the tools I used were: NodeJS, EJS and SASS along with React and Redux for the front end.
+                For the backend I explored JavaScript and MongoDB for the database as well as authentication with Google and other API's.
+
               </p>
             </div>
 
@@ -235,12 +252,12 @@
               </figure>
               <h3 class="heading-tertiary u-margin-bottom-1 project-text"> Machine Learning </h3>
               <p class="project-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              I am currently working with another personal project in machine learning. This project consists in familiarizing with the basic concepts of machine learning and data science
+              such as data preprocessing, regression, classification, clustering, etc.  It also consists in making and developing robust models with Python applying this concepts.
             </div>
 
             <div class="u-center-text u-margin-bottom-1">
-              <a href="https://github.com/sebastianballesteros?tab=repositories" class="btn btn-white">  Go to the repositories! </a>
+              <a href="https://github.com/sebastianballesteros?tab=repositories" class="btn btn-white" style="z-index:50000;">  Go to the repositories! </a>
             </div>
           </div>
 

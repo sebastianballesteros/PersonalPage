@@ -121,14 +121,16 @@ body {
   .header-logo-box {
     position: absolute;
     top: 40px;
-    left: 40px; }
+    left: 40px;
+    z-index: 10; }
   .header-logo {
     opacity: 0;
     opacity: 1 \9;
     height: 70px;
     animation: fade 1s;
     animation-delay: 4s;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    z-index: -5; }
   .header-logo:hover {
     transform: scale(1.1); }
   .header-text-box {
